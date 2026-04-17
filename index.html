@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jean Carlos Production | Maquillaje Profesional</title>
+  <meta name="description" content="Jean Carlos Alcalá — Maquillador profesional especializado en realzar tu belleza natural. Servicios de maquillaje social, novias, quinceañeras y peinados profesionales.">
+  <link rel="canonical" href="https://jeancarlosproduction.com/">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- ========== MOBILE MENU ========== -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#inicio"     onclick="closeMobileMenu()">Inicio</a>
+  <a href="#servicios"  onclick="closeMobileMenu()">Servicios</a>
+  <a href="#galeria"    onclick="closeMobileMenu()">Portafolio</a>
+  <a href="#peinados"  onclick="closeMobileMenu()">Peinados</a>
+  <a href="#reservacion" onclick="closeMobileMenu()" class="btn btn-nav mobile-nav-btn">RESERVAR CITA</a>
+</div>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+
+    <a href="#inicio" class="logo" aria-label="Jean Carlos Production">
+      <img src="assets/Logo Jean Carlos Production.svg" alt="Jean Carlos Production Logo" class="nav-logo">
+    </a>
+
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Portafolio</a>
+      <a href="#peinados">Peinados</a>
+      <a href="#reservacion" class="btn btn-nav">RESERVAR CITA</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section id="inicio" class="hero-section" aria-label="Sección principal">
+  <div class="hero-bg" role="img" aria-label="Imagen de maquillaje profesional"></div>
+  <div class="container hero-container">
+    <!-- Right-side content block -->
+    <div class="hero-content">
+      <p class="eyebrow reveal" style="color:var(--taupe);margin-bottom:16px;">Maquillaje Profesional</p>
+      <h1 class="reveal" style="transition-delay:0.1s">
+        Mi Lienzo es<br>la Esencia Femenina
+      </h1>
+      <p class="reveal" style="transition-delay:0.2s">
+        Transformo cada rostro en una obra de arte, fusionando elegancia y esencia
+        con las técnicas más avanzadas de maquillaje profesional.
+      </p>
+
+      <!-- Quick booking form -->
+      <form class="hero-form reveal" style="transition-delay:0.3s" id="heroForm" onsubmit="handleHeroForm(event)">
+        <!-- Honeypot anti-spam -->
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo electrónico">
+        <select name="servicio" id="heroServicioSelect">
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option>Maquillaje Social Soft — $30</option>
+          <option>Maquillaje Glam Social — $40</option>
+          <option>Maquillaje de Graduación — $50</option>
+          <option>Maquillaje de Quinceañera — $60</option>
+          <option>Maquillaje de Novia — $70</option>
+          <option>Maquillaje para Fotografía — $35</option>
+        </select>
+        <input type="tel" name="telefono" placeholder="Tu número de teléfono">
+        
+        <!-- Policy checkbox -->
+        <label class="form-checkbox">
+          <input type="checkbox" name="politicas" id="heroPoliticas" required>
+          <span class="form-checkbox-box"></span>
+          <span class="form-checkbox-label">
+            He leído y acepto las
+            <a href="privacidad.html" target="_blank">Políticas de Privacidad</a>
+            y los <a href="terminos.html" target="_blank">Términos y Condiciones</a>.
+          </span>
+        </label>
+
+        <button type="submit" class="btn btn-outline-light">AGENDAR CITA</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========== QUIEN SOY ========== -->
+<section id="quien-soy" class="section">
+  <div class="container">
+    <div class="social-icons-bar reveal">
+      <!-- WhatsApp -->
+      <a href="https://api.whatsapp.com/send/?phone=584121145024" target="_blank" rel="noopener" class="social-icon-link" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/jeancarlosproduction/" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+    </div>
+
+    <h2 class="reveal">¿Quién soy?</h2>
+    <div class="divider divider-center reveal"></div>
+    <p class="reveal" style="transition-delay:0.1s">
+      Soy Jean Carlos Alcalá, maquillador profesional, y mi misión es realzar tu belleza natural utilizando
+      técnicas especializadas, productos de alta gama y un trato personalizado que se adapta a ti y a tu estilo.
+      Tu rostro es mi lienzo: cada trazo busca reflejar tu esencia y convertirte en una verdadera obra de arte.
+    </p>
+    <div class="about-logo-container reveal" style="transition-delay:0.2s">
+      <img src="assets/Logo Jean Carlos 2.svg" alt="Jean Carlos Production" class="about-logo">
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICIOS ========== -->
+<section id="servicios" aria-label="Servicios de maquillaje">
+  <div class="servicios-grid">
+
+    <!-- Left: image of a model -->
+    <div class="servicios-image reveal-left">
+      <img src="assets/gallery-glam.jpg" alt="Maquillaje profesional — Jean Carlos Production" loading="lazy">
+    </div>
+
+    <!-- Right: service list -->
+    <div class="servicios-content reveal-right">
+      <p class="eyebrow">Servicios</p>
+      <h2>Maquillaje<br>Profesional</h2>
+      <div class="divider"></div>
+
+      <ul class="servicios-list" role="list">
+
+        <li class="service-item">
+          <div class="service-info">
+            <h4>Maquillaje Social Soft</h4>
+            <p>Look natural, fresco y delicado. Perfecto para eventos diurnos.</p>
+          </div>
+          <span class="service-price">$30</span>
+        </li>
+
+        <li class="service-item">
+          <div class="service-info">
+            <h4>Maquillaje Glam Social</h4>
+            <p>Estilo definido, elegante y con mayor intensidad.</p>
+          </div>
+          <span class="service-price">$40</span>
+        </li>
+
+        <li class="service-item">
+          <div class="service-info">
+            <h4>Maquillaje de Graduación</h4>
+            <p>Acabado duradero, sofisticado y personalizado para ese día inolvidable.</p>
+          </div>
+          <span class="service-price">$50</span>
+        </li>
+
+        <li class="service-item">
+          <div class="service-info">
+            <h4>Maquillaje de Quinceañera</h4>
+            <p>Resalta la frescura y fantasía de esta etapa única.</p>
+          </div>
+          <span class="service-price">$60</span>
+        </li>
+
+        <li class="service-item">
+          <div class="service-info">
+            <h4>Maquillaje de Novia</h4>
+            <p>Diseñado para hacerte brillar en uno de los días más importantes de tu vida.</p>
+          </div>
+          <span class="service-price">$70</span>
+        </li>
+
+        <li class="service-item">
+          <div class="service-info">
+            <h4>Maquillaje para Fotografía</h4>
+            <p>Ideal para sesiones profesionales, bajo luz natural o artificial.</p>
+          </div>
+          <span class="service-price">$35</span>
+        </li>
+
+      </ul>
+
+      <div class="servicios-cta">
+        <a href="https://api.whatsapp.com/send/?phone=584121145024" target="_blank" rel="noopener" class="btn btn-outline-light">Reservar Servicio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GALERIA / CARRUSEL ========== -->
+<section id="galeria" aria-label="Portafolio de trabajos">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow">Portafolio</p>
+    </div>
+  </div>
+
+  <!-- Carousel: margin-inline is adjusted inside .carousel-wrapper -->
+  <div class="container" style="padding-inline:0;position:relative;">
+    <div class="carousel-wrapper" id="carouselWrapper">
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Slides — repeated set for smooth looping feel -->
+        <div class="carousel-slide" onclick="openLightbox(0)">
+          <img src="assets/gallery-glam.jpg" alt="Maquillaje Glam Social" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(1)">
+          <img src="assets/Maquillaje-1.jpg" alt="Maquillaje Profesional 1" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(2)">
+          <img src="assets/Maquillaje-2.jpg" alt="Maquillaje Profesional 2" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(3)">
+          <img src="assets/Maquillaje-3.jpg" alt="Maquillaje Profesional 3" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(4)">
+          <img src="assets/Maquillaje-4.jpg" alt="Maquillaje Profesional 4" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(5)">
+          <img src="assets/MAquillaje-5.jpg" alt="Maquillaje Profesional 5" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(6)">
+          <img src="assets/Maquillaje-6.jpg" alt="Maquillaje Profesional 6" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(7)">
+          <img src="assets/Maquillaje-7.jpg" alt="Maquillaje Profesional 7" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(8)">
+          <img src="assets/Maquillaje-8.jpg" alt="Maquillaje Profesional 8" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(9)">
+          <img src="assets/Maquillaje-9.jpg" alt="Maquillaje Profesional 9" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(10)">
+          <img src="assets/MAquillaje-10.jpg" alt="Maquillaje Profesional 10" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(11)">
+          <img src="assets/Maquillaje-11.jpg" alt="Maquillaje Profesional 11" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(12)">
+          <img src="assets/Maquillaje-12.jpg" alt="Maquillaje Profesional 12" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(13)">
+          <img src="assets/Maquillaje-13.jpg" alt="Maquillaje Profesional 13" loading="lazy">
+        </div>
+        <div class="carousel-slide" onclick="openLightbox(14)">
+          <img src="assets/Maquillaje-14.jpg" alt="Maquillaje Profesional 14" loading="lazy">
+        </div>
+      </div>
+
+      <button class="carousel-btn prev" id="carouselPrev" aria-label="Imagen anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="carousel-btn next" id="carouselNext" aria-label="Imagen siguiente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LIGHTBOX ========== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+  <div class="lightbox-inner">
+    <img id="lightboxImg" src="" alt="Imagen ampliada">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Siguiente">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- ========== RESERVACION Y RECOMENDACIONES ========== -->
+<section id="reservacion" class="section" aria-label="Reservación y cláusulas">
+  <div class="container">
+
+    <div class="reservacion-grid">
+
+      <!-- Left: policies -->
+      <div>
+        <p class="eyebrow reveal">Cláusulas y Condiciones</p>
+        <h2 class="reveal" style="transition-delay:0.05s">Reservación y<br>Recomendaciones</h2>
+        <div class="divider reveal" style="transition-delay:0.1s"></div>
+        <p class="reveal" style="transition-delay:0.12s;font-size:0.85rem;color:var(--warm-gray);margin-bottom:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;">Para el Día del Servicio</p>
+
+        <ul class="clausulas-list">
+          <li class="clausula-item reveal" style="transition-delay:0.14s">
+            <span class="clausula-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Se solicita un 50% del total del servicio como abono para reservar tu cita.
+          </li>
+          <li class="clausula-item reveal" style="transition-delay:0.17s">
+            <span class="clausula-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            El 50% restante se cancela al finalizar el servicio.
+          </li>
+          <li class="clausula-item reveal" style="transition-delay:0.20s">
+            <span class="clausula-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            El abono no es reembolsable en caso de cancelaciones de último momento.
+          </li>
+          <li class="clausula-item reveal" style="transition-delay:0.23s">
+            <span class="clausula-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Las citas deben reservarse con 3 a 5 días de anticipación.
+          </li>
+        </ul>
+
+        <p class="reveal" style="transition-delay:0.26s;font-size:0.85rem;color:var(--warm-gray);margin-top:24px;margin-bottom:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;">Preparación Sugerida</p>
+        
+        <ul class="clausulas-list">
+          <li class="clausula-item reveal" style="transition-delay:0.28s">
+            <span class="clausula-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Cabello limpio y completamente seco.
+          </li>
+          <li class="clausula-item reveal" style="transition-delay:0.31s">
+            <span class="clausula-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Rostro limpio, sin maquillaje ni productos.
+          </li>
+          <li class="clausula-item reveal" style="transition-delay:0.34s">
+            <span class="clausula-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            No exfoliar ni realizar limpieza facial profunda el mismo día.
+          </li>
+          <li class="clausula-item reveal" style="transition-delay:0.37s">
+            <span class="clausula-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Lavar el rostro con agua fría la noche anterior.
+          </li>
+          <li class="clausula-item reveal" style="transition-delay:0.40s">
+            <span class="clausula-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Usar una prenda fácil de retirar para no afectar el maquillaje ni el peinado.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: booking form -->
+      <div class="reveal" style="transition-delay:0.15s">
+        <div class="reservation-form-card">
+          <h3>Reserva tu Cita</h3>
+          <p>Completa el formulario y nos pondremos en contacto para confirmar tu disponibilidad.</p>
+
+          <form id="reservationForm" onsubmit="handleReservationForm(event)" novalidate>
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+
+            <div class="form-group">
+              <label for="resNombre">Nombre</label>
+              <input id="resNombre" type="text" name="nombre" placeholder="Tu nombre completo" required>
+            </div>
+
+            <div class="form-group">
+              <label for="resEmail">Correo electrónico</label>
+              <input id="resEmail" type="email" name="email" placeholder="tu@correo.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="resTelefono">Teléfono</label>
+              <input id="resTelefono" type="tel" name="telefono" placeholder="Tu número de contacto" required>
+            </div>
+
+            <div class="form-group">
+              <label for="resServicio">Servicio</label>
+              <select id="resServicio" name="servicio" required>
+                <option value="" disabled selected>Selecciona un servicio</option>
+                <option>Maquillaje Social Soft — $30</option>
+                <option>Maquillaje Glam Social — $40</option>
+                <option>Maquillaje de Graduación — $50</option>
+                <option>Maquillaje de Quinceañera — $60</option>
+                <option>Maquillaje de Novia — $70</option>
+                <option>Maquillaje para Fotografía — $35</option>
+                <option>Peinado Profesional — desde $20</option>
+              </select>
+            </div>
+
+            <!-- Date & Time row -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="resFecha">Fecha del evento</label>
+                <input id="resFecha" type="date" name="fecha" required>
+              </div>
+              <div class="form-group">
+                <label for="resHora">Hora preferida</label>
+                <input id="resHora" type="time" name="hora">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="resNotas">Datos adicionales</label>
+              <textarea id="resNotas" name="notas" rows="3" placeholder="Referencias, detalles del evento, peticiones especiales..."></textarea>
+            </div>
+
+            <!-- Policy checkbox -->
+            <label class="form-checkbox">
+              <input type="checkbox" name="politicas" id="resPoliticas" required>
+              <span class="form-checkbox-box"></span>
+              <span class="form-checkbox-label">
+                He leído y acepto las
+                <a href="privacidad.html" target="_blank">Políticas de Privacidad</a>
+                y los <a href="terminos.html" target="_blank">Términos y Condiciones</a>.
+              </span>
+            </label>
+
+            <button type="submit" class="btn btn-outline-light form-submit" id="reservationSubmitBtn">
+              <span id="reservationBtnText">ENVIAR SOLICITUD</span>
+              <span id="reservationBtnSpinner" style="display:none;">Enviando...</span>
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== PEINADOS PROFESIONALES ========== -->
+<section id="peinados" aria-label="Peinados profesionales">
+  <div class="peinados-bg" role="img" aria-label="Fondo peinados profesionales"></div>
+  <div class="container" style="position:relative;z-index:2;padding-block:100px;">
+    <div class="peinados-content">
+      <h2 class="reveal-left">Peinados<br>Profesionales</h2>
+      <p class="price-tag reveal-left" style="transition-delay:0.08s">A partir de $20</p>
+      <p class="reveal-left" style="transition-delay:0.15s">
+        Complementarios a cualquiera de los maquillajes anteriores.
+        Estilos con acabado pulido y elegante.
+      </p>
+      <ul class="peinados-list reveal-left" style="transition-delay:0.22s">
+        <li>Ondas suaves</li>
+        <li>Rizos definidos</li>
+        <li>Ondas quebradas</li>
+        <li>Estilos laterales</li>
+        <li>Cintillo con tu propio cabello</li>
+        <li>Media cola</li>
+        <li>Cola alta</li>
+        <li>Estilos recogidos hacia atrás</li>
+      </ul>
+      <div class="reveal-left" style="transition-delay:0.3s">
+        <a href="https://api.whatsapp.com/send/?phone=584121145024" target="_blank" rel="noopener" class="btn btn-outline-light">Consultar Disponibilidad</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="peinados-logo" aria-hidden="true">Jean Carlos</div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer id="contacto" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="assets/Logo Jean Carlos Production.svg" alt="Jean Carlos Production" class="footer-logo">
+        </div>
+        <p>
+          Jean Carlos Production es un espacio dedicado a la transformación artística
+          y el realce de la esencia femenina. A través de técnicas especializadas y
+          productos de alta gama, convertimos cada servicio en una experiencia de lujo.
+        </p>
+        <div class="footer-social">
+          <a href="https://api.whatsapp.com/send/?phone=584121145024" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/jeancarlosproduction/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services column -->
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Maquillaje Social Soft</a></li>
+          <li><a href="#servicios">Maquillaje Glam Social</a></li>
+          <li><a href="#servicios">Maquillaje de Graduación</a></li>
+          <li><a href="#servicios">Maquillaje de Quinceañera</a></li>
+          <li><a href="#servicios">Maquillaje de Novia</a></li>
+          <li><a href="#peinados">Peinados Profesionales</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact column -->
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          +58 412 114 5024
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          jeancarlosproduction@gmail.com
+        </div>
+        <div style="margin-top:20px;">
+          <a href="https://api.whatsapp.com/send/?phone=584121145024" target="_blank" rel="noopener" class="btn btn-outline-light" style="font-size:0.7rem;padding:10px 22px;">ENVIAR MENSAJE</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2026 Jean Carlos Production. Todos los derechos reservados.</p>
+      <div class="footer-legal">
+        <a href="privacidad.html">Política de Privacidad</a>
+        <a href="terminos.html">Términos y Condiciones</a>
+      </div>
+      <p class="credit">Diseñado por <a href="https://www.instagram.com/istorrez/" target="_blank" rel="noopener">Sergio Torrez</a>.</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ========== FLOATING WHATSAPP ========== -->
+<a href="https://api.whatsapp.com/send/?phone=584121145024" target="_blank" rel="noopener" class="fab-whatsapp" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<!-- ========== SUCCESS MODAL ========== -->
+<div class="success-modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
+  <div class="success-modal-inner">
+    <!-- Animated checkmark -->
+    <div class="success-check" aria-hidden="true">
+      <svg viewBox="0 0 52 52" fill="none">
+        <circle class="success-check-circle" cx="26" cy="26" r="25" stroke="#c0bab3" stroke-width="1.5" fill="none"/>
+        <polyline class="success-check-tick" points="14,27 22,35 38,19" stroke="#c0bab3" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h3 id="successModalTitle">Solicitud enviada</h3>
+    <p>Hemos recibido tu mensaje. Jean Carlos se pondrá en contacto contigo muy pronto para confirmar tu cita.</p>
+    <button class="btn btn-dark" onclick="closeSuccessModal()">ENTENDIDO</button>
+  </div>
+</div>
+<div class="success-overlay" id="successOverlay" onclick="closeSuccessModal()"></div>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+/* ---- Scroll-reveal ---- */
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+/* ---- Header scroll ---- */
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ---- Mobile menu ---- */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', false);
+  document.body.style.overflow = '';
+}
+
+/* ---- Carousel ---- */
+const track    = document.getElementById('carouselTrack');
+const slides   = track.querySelectorAll('.carousel-slide');
+const prevBtn  = document.getElementById('carouselPrev');
+const nextBtn  = document.getElementById('carouselNext');
+const totalSlides = slides.length;
+let currentSlide = 0;
+let isMobile = window.innerWidth < 768;
+
+function getSlidesVisible() { return isMobile ? 1 : 6; }
+function getSlideWidth() {
+  const wrapper = document.getElementById('carouselWrapper');
+  const gap = 12;
+  const visible = getSlidesVisible();
+  const styles = window.getComputedStyle(wrapper);
+  const paddingX = parseFloat(styles.paddingLeft) + parseFloat(styles.paddingRight);
+  const availableWidth = wrapper.clientWidth - paddingX;
+  return (availableWidth - gap * (visible - 1)) / visible;
+}
+function updateCarousel() {
+  const w = getSlideWidth();
+  const gap = 12;
+  slides.forEach(s => {
+    s.style.flex = `0 0 ${w}px`;
+    s.style.maxWidth = `${w}px`;
+  });
+  track.style.transform = `translateX(-${currentSlide * (w + gap)}px)`;
+}
+function nextCarousel() {
+  const visible = getSlidesVisible();
+  const maxSlide = totalSlides - visible;
+  currentSlide = currentSlide >= maxSlide ? 0 : currentSlide + 1;
+  updateCarousel();
+}
+function prevCarousel() {
+  const visible = getSlidesVisible();
+  const maxSlide = totalSlides - visible;
+  currentSlide = currentSlide <= 0 ? maxSlide : currentSlide - 1;
+  updateCarousel();
+}
+nextBtn.addEventListener('click', nextCarousel);
+prevBtn.addEventListener('click', prevCarousel);
+window.addEventListener('resize', () => {
+  isMobile = window.innerWidth < 768;
+  currentSlide = 0;
+  updateCarousel();
+}, { passive: true });
+updateCarousel();
+
+/* ---- Lightbox ---- */
+const galleryImages = Array.from(slides).map(s => ({
+  src: s.querySelector('img').src,
+  alt: s.querySelector('img').alt
+}));
+let lightboxIndex = 0;
+const lightbox    = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+
+function openLightbox(index) {
+  lightboxIndex = index;
+  lightboxImg.src = galleryImages[index].src;
+  lightboxImg.alt = galleryImages[index].alt;
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function lightboxPrev() {
+  lightboxIndex = (lightboxIndex - 1 + galleryImages.length) % galleryImages.length;
+  lightboxImg.src = galleryImages[lightboxIndex].src;
+  lightboxImg.alt = galleryImages[lightboxIndex].alt;
+}
+function lightboxNext() {
+  lightboxIndex = (lightboxIndex + 1) % galleryImages.length;
+  lightboxImg.src = galleryImages[lightboxIndex].src;
+  lightboxImg.alt = galleryImages[lightboxIndex].alt;
+}
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+document.getElementById('lightboxPrev').addEventListener('click', lightboxPrev);
+document.getElementById('lightboxNext').addEventListener('click', lightboxNext);
+lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape')      closeLightbox();
+  if (e.key === 'ArrowLeft')   lightboxPrev();
+  if (e.key === 'ArrowRight')  lightboxNext();
+});
+
+/* ---- FormSubmit AJAX handler ---- */
+const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/jeancarlosproduction@gmail.com';
+
+function showSuccessModal() {
+  document.getElementById('successModal').classList.add('open');
+  document.getElementById('successOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeSuccessModal() {
+  document.getElementById('successModal').classList.remove('open');
+  document.getElementById('successOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+async function submitToFormSubmit(payload, formEl, btnText, btnSpinner, submitBtn) {
+  // Show loading state
+  if (btnText)    btnText.style.display = 'none';
+  if (btnSpinner) btnSpinner.style.display = 'inline';
+  if (submitBtn)  submitBtn.disabled = true;
+
+  try {
+    const response = await fetch(FORMSUBMIT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const result = await response.json();
+    if (result.success === 'true' || response.ok) {
+      formEl.reset();
+      showSuccessModal();
+    } else {
+      alert('Hubo un problema al enviar tu solicitud. Por favor inténtalo de nuevo o contáctanos por WhatsApp.');
+    }
+  } catch (err) {
+    // Fallback: open WhatsApp if network fails
+    alert('No se pudo enviar el correo. Hemos abierto WhatsApp como alternativa.');
+    window.open('https://api.whatsapp.com/send/?phone=584121145024', '_blank');
+  } finally {
+    if (btnText)    btnText.style.display = 'inline';
+    if (btnSpinner) btnSpinner.style.display = 'none';
+    if (submitBtn)  submitBtn.disabled = false;
+  }
+}
+
+/* Hero form (quick booking) */
+function handleHeroForm(e) {
+  e.preventDefault();
+  // Validate policies checkbox
+  const checkbox = document.getElementById('heroPoliticas');
+  if (!checkbox.checked) {
+    checkbox.closest('.form-checkbox').classList.add('shake');
+    setTimeout(() => checkbox.closest('.form-checkbox').classList.remove('shake'), 600);
+    return;
+  }
+  const fd = new FormData(e.target);
+  // Honeypot check
+  if (fd.get('_honey')) return;
+
+  const payload = {
+    _subject: 'Nueva solicitud de cita — Jean Carlos Production',
+    Nombre:   fd.get('nombre') || '',
+    Correo:   fd.get('email')  || '',
+    Servicio: fd.get('servicio') || '',
+    Teléfono: fd.get('telefono') || ''
+  };
+  submitToFormSubmit(payload, e.target, null, null, e.target.querySelector('button'));
+}
+
+/* Reservation form (full) */
+function handleReservationForm(e) {
+  e.preventDefault();
+  // Validate policies checkbox
+  const checkbox = document.getElementById('resPoliticas');
+  if (!checkbox.checked) {
+    checkbox.closest('.form-checkbox').classList.add('shake');
+    setTimeout(() => checkbox.closest('.form-checkbox').classList.remove('shake'), 600);
+    return;
+  }
+  const fd = new FormData(e.target);
+
+  // Honeypot check
+  if (fd.get('_honey')) return;
+
+  const payload = {
+    _subject: 'Reservación de cita — Jean Carlos Production',
+    Nombre:             fd.get('nombre')   || '',
+    Correo:             fd.get('email')    || '',
+    Teléfono:           fd.get('telefono') || '',
+    Servicio:           fd.get('servicio') || '',
+    'Fecha del Evento': fd.get('fecha')    || '',
+    'Hora Preferida':   fd.get('hora')     || '',
+    'Datos Adicionales': fd.get('notas')   || ''
+  };
+  const btn     = document.getElementById('reservationSubmitBtn');
+  const btnText = document.getElementById('reservationBtnText');
+  const spinner = document.getElementById('reservationBtnSpinner');
+  submitToFormSubmit(payload, e.target, btnText, spinner, btn);
+}
+</script>
+
+</body>
+</html>
