@@ -739,37 +739,53 @@ h1, h2, h3, .display { font-family: 'Playfair Display', serif; }
 
 /* Date / Time native input — Full styling for visibility and iOS/Android fix */
 .form-group input[type="date"],
-.form-group input[type="time"] {
-  -webkit-appearance: none; /* iPhone Fix: Remove native styling */
+.form-group input[type="time"],
+.form-group input.date-input,
+.form-group input.time-input {
+  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   
   width: 100%;
-  min-height: 48px; /* Force consistent height for mobile browsers */
-  background: rgba(255,255,255,0.06);
+  min-height: 48px;
+  background-color: rgba(255,255,255,0.06);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 14px) center;
+  background-size: 18px;
   border: 1px solid rgba(244,244,241,0.15);
   border-radius: var(--radius);
   color: var(--cream);
-  padding: 12px 14px;
+  padding: 12px 40px 12px 14px; /* More right padding for the icon */
   font-family: inherit;
   font-size: 0.85rem;
   outline: none;
   color-scheme: dark;
   transition: border-color 0.3s;
   box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
 }
 
-/* Ensure icons (clock/calendar) are white and visible on dark background */
-.form-group input[type="date"]::-webkit-calendar-picker-indicator,
-.form-group input[type="time"]::-webkit-calendar-picker-indicator {
-  filter: invert(1);
+/* Custom White Icons */
+.form-group input.date-input {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='4' width='18' height='18' rx='2' ry='2'/><line x1='16' y1='2' x2='16' y2='6'/><line x1='8' y1='2' x2='8' y2='6'/><line x1='3' y1='10' x2='21' y2='10'/></svg>");
+}
+.form-group input.time-input {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg>");
+}
+
+/* Hide native indicators to avoid double icons, especially on Chrome */
+.form-group input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
   cursor: pointer;
 }
 
-.form-group input[type="date"]:focus,
-.form-group input[type="time"]:focus {
+.form-group input:focus {
   border-color: var(--taupe);
 }
 
