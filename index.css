@@ -714,7 +714,7 @@ h1, h2, h3, .display { font-family: 'Playfair Display', serif; }
 .form-row-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;           /* Tighter gap for better mobile fit */
+  gap: 12px;           /* Tighter gap for better mobile fit */
   margin-bottom: 20px;
 }
 .form-row-2 .form-group { margin-bottom: 0; }
@@ -737,10 +737,15 @@ h1, h2, h3, .display { font-family: 'Playfair Display', serif; }
 .form-group textarea::placeholder { color: rgba(192,186,179,0.5); }
 .form-group textarea:focus { border-color: var(--taupe); }
 
-/* Date / Time native input — Full styling for visibility */
+/* Date / Time native input — Full styling for visibility and iOS/Android fix */
 .form-group input[type="date"],
 .form-group input[type="time"] {
+  -webkit-appearance: none; /* iPhone Fix: Remove native styling */
+  -moz-appearance: none;
+  appearance: none;
+  
   width: 100%;
+  min-height: 48px; /* Force consistent height for mobile browsers */
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(244,244,241,0.15);
   border-radius: var(--radius);
@@ -751,7 +756,18 @@ h1, h2, h3, .display { font-family: 'Playfair Display', serif; }
   outline: none;
   color-scheme: dark;
   transition: border-color 0.3s;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
 }
+
+/* Ensure icons (clock/calendar) are white and visible on dark background */
+.form-group input[type="date"]::-webkit-calendar-picker-indicator,
+.form-group input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
 .form-group input[type="date"]:focus,
 .form-group input[type="time"]:focus {
   border-color: var(--taupe);
